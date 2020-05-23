@@ -21,7 +21,20 @@
             //    $("#txtTo").css("background-color", "yellow");
             //    $("#lblTo").css("background-color", "yellow");
             //});
-            $("#btnShow").
+            $("#btnShow").click(function () {
+                $("#tblCaro").show(1500);
+            })
+            $("#btnHidden").click(function () {
+                $("#tblCaro").hide(1500);
+            })
+            $("#btnToggle").click(function () {
+                $("#tblCaro").toggle(1500);
+            })
+            var gt = "X";
+            $("td").click(function () {
+                $(this).html(gt);
+                gt = gt == "X" ? "O" : "X";
+            });
         });
     </script>
     <style>
@@ -29,6 +42,7 @@
             border: 1px solid black;
             width: 25px;
             height: 25px;
+            text-align: center;
         }
     </style>
 </head>
